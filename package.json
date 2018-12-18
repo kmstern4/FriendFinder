@@ -1,0 +1,27 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Find some friends",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmstern4/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "Kelly Stern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmstern4/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/kmstern4/FriendFinder#readme"
+}
