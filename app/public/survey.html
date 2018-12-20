@@ -7,162 +7,129 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Friend Finder Survey</title>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/style.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Survey</h1>
-
-        <form role="form">
-            <label for="name">Name</label><br>
-            <input type="text" name="name" id="name"><br>
-            <label for="photo">Upload Photo</label><br>
-            <input type="text" name="photo" id="photo"><br>
-            <label for="one">ONE</label>
-            <select name="one" id="one">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="two">two</label>
-            <select name="two" id="two">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="three">three</label>
-            <select name="three" id="three">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="four">four</label>
-            <select name="four" id="four">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="five">five</label>
-            <select name="five" id="five">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="six">six</label>
-            <select name="six" id="six">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="seven">seven</label>
-            <select name="seven" id="seven">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="eight">eight</label>
-            <select name="eight" id="eight">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="nine">NINE</label>
-            <select name="nine" id="nine">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <label for="ten">TEN</label>
-            <select name="ten" id="ten">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            <button id="submit">Submit</button>
-        </form>
+        <h2 class="animated fadeInDown slow">Who Will Your Captain Be?</h2>
+        
+        <div class="animated fadeIn slower" id="content-div">
+            <form role="form">
+                <div id="name-div">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name"><br>
+                </div>
+                <div id="photo-div">
+                    <label for="photo">Photo Link</label><br>
+                    <input type="text" name="photo" id="photo"><br>
+                </div>
+                <label for="one">You like to work in a team.</label><br>
+                <select name="one" id="one">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="two">You like the ocean more than the mountains.</label><br>
+                <select name="two" id="two">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="three">The environment is not important to you.</label><br>
+                <select name="three" id="three">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="four">You are hungry right now.</label><br>
+                <select name="four" id="four">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="five">You tend to avoid conflict.</label><br>
+                <select name="five" id="five">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="six">You wish you could stay a kid forever</label><br>
+                <select name="six" id="six">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="seven">You are more good than evil.</label><br>
+                <select name="seven" id="seven">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="eight">You don't like to party.</label><br>
+                <select name="eight" id="eight">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="nine">You like to follow the rules.</label><br>
+                <select name="nine" id="nine">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <label for="ten">You believe in aliens.</label><br>
+                <select name="ten" id="ten">
+                    <option value="0"></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
 
         <div class="modal" id="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1>Your Captain Match is...</h1>
+                <h3>Your Captain Match is...</h3>
                 <p id="captain-match"></p>
             </div>
         </div>
 
 
         
-        <script type="text/javascript">
+        <script src="javascript/app.js" type="text/javascript">
 
-            var newFriend;
-            var diffArr = [];
-            var match;
-
-            $("button").on("click", function(event) {
-                event.preventDefault();
-                newFriend = {
-                    name: $("#name").val().trim(),
-                    photo: $("#photo").val().trim(),
-                    scores: [
-                        $("#one").val(), $("#two").val(), $("#three").val(), $("#four").val(), $("#five").val(), $("#six").val(), $("#seven").val(), $("#eight").val(), $("#nine").val(), $("#ten").val()
-                    ]
-                };
-                console.log(newFriend);
-                $.ajax({ url: "/api/friends", method: "GET" })
-                .then(function(friendData) {
-                    for (var j=0; j < friendData.length; j++) {
-                        var scoreDiff = 0;
-                        for (var i=0; i < friendData[j].scores.length; i++) {
-                            scoreDiff = Math.abs((parseInt(friendData[j].scores[i]) - parseInt(newFriend.scores[i]))) + scoreDiff;
-                            console.log(`Current Score Difference: ${scoreDiff}`);
-                        }
-                        console.log(`Score difference for Friend ${j}: ${scoreDiff}`);
-                        diffArr.push(scoreDiff);
-                    };
-                    friendMatch(friendData);
-                    showModal();
-                })
-            });
-            
-            function friendMatch(data) {
-                var smallestNum = Math.min(...diffArr);
-                console.log(`Smallest Number is ${smallestNum}`);
-                var smallIndex = diffArr.indexOf(smallestNum);
-                console.log(`It occurs at index ${smallIndex}`);
-                match = data[smallIndex].name;
-                console.log(match);
-                $("#captain-match").text(match);
-            };
-
-            function showModal() {
-                $(".modal").css("display", "block");
-               
-                // $("window").on("click", function() {
-                //     $(".modal").style.display = "none";
-                // });
-            };
-            $(".close").on("click", function() {
-                $(".modal").css("display", "none");
-                });
 
         
         </script>
