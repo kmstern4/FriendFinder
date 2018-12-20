@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Friend Finder Survey</title>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
@@ -16,7 +17,7 @@
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name"><br>
             <label for="photo">Upload Photo</label><br>
-            <input type="text" name="photo" id="photo">
+            <input type="text" name="photo" id="photo"><br>
             <label for="one">ONE</label>
             <select name="one" id="one">
                 <option value="1">1</option>
@@ -97,9 +98,74 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select><br>
-            <button type="submit" id="submit">Submit</button>
+            <button id="submit">Submit</button>
         </form>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Your Captain Match is...</h1>
+                <p id="captain-match"></p>
+            </div>
+        </div>
+
+
         
+        <script type="text/javascript">
+
+            var newFriend;
+            var diffArr = [];
+            var match;
+
+            $("button").on("click", function(event) {
+                event.preventDefault();
+                newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#one").val(), $("#two").val(), $("#three").val(), $("#four").val(), $("#five").val(), $("#six").val(), $("#seven").val(), $("#eight").val(), $("#nine").val(), $("#ten").val()
+                    ]
+                };
+                console.log(newFriend);
+                $.ajax({ url: "/api/friends", method: "GET" })
+                .then(function(friendData) {
+                    for (var j=0; j < friendData.length; j++) {
+                        var scoreDiff = 0;
+                        for (var i=0; i < friendData[j].scores.length; i++) {
+                            scoreDiff = Math.abs((parseInt(friendData[j].scores[i]) - parseInt(newFriend.scores[i]))) + scoreDiff;
+                            console.log(`Current Score Difference: ${scoreDiff}`);
+                        }
+                        console.log(`Score difference for Friend ${j}: ${scoreDiff}`);
+                        diffArr.push(scoreDiff);
+                    };
+                    friendMatch(friendData);
+                    showModal();
+                })
+            });
+            
+            function friendMatch(data) {
+                var smallestNum = Math.min(...diffArr);
+                console.log(`Smallest Number is ${smallestNum}`);
+                var smallIndex = diffArr.indexOf(smallestNum);
+                console.log(`It occurs at index ${smallIndex}`);
+                match = data[smallIndex].name;
+                console.log(match);
+                $("#captain-match").text(match);
+            };
+
+            function showModal() {
+                $(".modal").css("display", "block");
+               
+                // $("window").on("click", function() {
+                //     $(".modal").style.display = "none";
+                // });
+            };
+            $(".close").on("click", function() {
+                $(".modal").css("display", "none");
+                });
+
+        
+        </script>
     </body>
 
 </html>

@@ -10,15 +10,16 @@ $("#submit").on("click", function(event) {
         ]
     };
     console.log(newFriend);
-    $.ajax({ url: "/api/friends", method: "GET" })
-    .then(function(friendData) {
-        var dataArr = [];
-        for (var i=0; i < friendData.length; i++) {
-            dataArr.push(friendData[i].score);
-        };
-        for (var i=0; i < dataArr.length; i++) {
-            
-        }
-    })
+    // $.ajax({ url: "/api/friends", method: "GET" })
+    // .then(function(friendData) {
+    //     for (var j=0; j < friendData.length; j++) {
+    //         var scoreDiff = 0;
+    //         for (var i=0; i < friendData[j].score.length; i++) {
+    //             scoreDiff += friendData[j].score[i] + newFriend.score[i];
+    //             console.log(`Current Score Difference: ${scoreDiff}`);
+    //         }
+    //         console.log(`Score difference for Friend ${j}`);
+    //     };
+    // })
 });
 
