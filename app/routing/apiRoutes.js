@@ -5,9 +5,9 @@ module.exports = function(app) {
         res.json(friendData);
     });
 
-    // app.post("/api/friends", function(req, res) {
-    //     console.log(req.body);
-    //     friendData.push(req.body);
-    //     res.json(true);
-    // });
+    app.post("/api/friends", function(req, res) {
+        console.log(req.body);
+        friendData.push(req.body);
+        res.json(true);
+    });
 };

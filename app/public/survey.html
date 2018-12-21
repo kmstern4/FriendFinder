@@ -18,111 +18,123 @@
             <form role="form">
                 <div id="name-div">
                     <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name"><br>
+                    <input type="text" name="name" required="required" id="name"><br>
                 </div>
                 <div id="photo-div">
-                    <label for="photo">Photo Link</label><br>
-                    <input type="text" name="photo" id="photo"><br>
+                    <label for="photo">Link Photo (or use the default)</label><br>
+                    <input type="text" name="photo" required="required" id="photo" value="images/default.png"><br>
                 </div>
-                <label for="one">You like to work in a team.</label><br>
-                <select name="one" id="one">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="two">You like the ocean more than the mountains.</label><br>
-                <select name="two" id="two">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="three">The environment is not important to you.</label><br>
-                <select name="three" id="three">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="four">You are hungry right now.</label><br>
-                <select name="four" id="four">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="five">You tend to avoid conflict.</label><br>
-                <select name="five" id="five">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="six">You wish you could stay a kid forever</label><br>
-                <select name="six" id="six">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="seven">You are more good than evil.</label><br>
-                <select name="seven" id="seven">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="eight">You don't like to party.</label><br>
-                <select name="eight" id="eight">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="nine">You like to follow the rules.</label><br>
-                <select name="nine" id="nine">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <label for="ten">You believe in aliens.</label><br>
-                <select name="ten" id="ten">
-                    <option value="0"></option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select><br>
-                <button id="submit">Submit</button>
+                <div id="select-div">
+                    <p id="instructions">One a scale of 1 to 5, 5 being strongly agree, how much to do you agree with the following statements?</p>
+                    <label for="one">You like to work in a team.</label><br>
+                    <select name="one" id="one">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="two">You like the ocean more than the mountains.</label><br>
+                    <select name="two" id="two">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="three">The environment is not important to you.</label><br>
+                    <select name="three" id="three">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="four">You are hungry right now.</label><br>
+                    <select name="four" id="four">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="five">You tend to avoid conflict.</label><br>
+                    <select name="five" id="five">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="six">You wish you could stay a kid forever</label><br>
+                    <select name="six" id="six">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="seven">You are more good than evil.</label><br>
+                    <select name="seven" id="seven">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="eight">You don't like to party.</label><br>
+                    <select name="eight" id="eight">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="nine">You like to follow the rules.</label><br>
+                    <select name="nine" id="nine">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                    <label for="ten">You believe in aliens.</label><br>
+                    <select name="ten" id="ten">
+                        <option value="0"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select><br>
+                </div>
+                <div id="button-div">
+                    <button id="submit">Submit</button>
+                </div>
             </form>
         </div>
 
         <div class="modal" id="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h3>Your Captain Match is...</h3>
-                <p id="captain-match"></p>
+                <h3>Aye Aye, Captain!</h3>
+                <div class="captain-content">
+                    <p id="captain-match"></p>
+                    <img src="" id="captain-image">
+                </div>
+                <div class="user-content">
+                    <p id="user-name"></p>
+                    <img src="" id="user-image">
+                </div>
             </div>
         </div>
 

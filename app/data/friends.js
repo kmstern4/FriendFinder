@@ -1,7 +1,7 @@
 var friendArray = [
     {
         name: "Captain Hook",
-        photo: "fakeimagelink.jpg",
+        photo: "images/hook.png",
         scores: [
             3,
             5,
@@ -16,7 +16,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain America",
-        photo: "fakeimagelink.jpg",
+        photo: "images/america.png",
         scores: [
             5,
             1,
@@ -31,7 +31,7 @@ var friendArray = [
         ]
     },     {
         name: "Cap'n Crunch",
-        photo: "fakeimagelink.jpg",
+        photo: "images/crunch.jpg",
         scores: [
             1,
             5,
@@ -46,7 +46,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Planet",
-        photo: "fakeimagelink.jpg",
+        photo: "images/planet.png",
         scores: [
             4,
             3,
@@ -61,7 +61,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Jack Sparrow",
-        photo: "fakeimagelink.jpg",
+        photo: "images/sparrow.png",
         scores: [
             1,
             5,
@@ -76,7 +76,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Jean-Luc Picard",
-        photo: "fakeimagelink.jpg",
+        photo: "images/picard.png",
         scores: [
             4,
             2,
@@ -91,7 +91,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Kirk",
-        photo: "fakeimagelink.jpg",
+        photo: "images/kirk.png",
         scores: [
             4,
             4,
@@ -106,7 +106,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Marvel",
-        photo: "fakeimagelink.jpg",
+        photo: "images/marvel.png",
         scores: [
             3,
             1,
@@ -121,7 +121,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Underpants",
-        photo: "fakeimagelink.jpg",
+        photo: "images/underpants.png",
         scores: [
             1,
             3,
@@ -136,7 +136,7 @@ var friendArray = [
         ]
     },     {
         name: "Captain Morgan",
-        photo: "fakeimagelink.jpg",
+        photo: "images/morgan.png",
         scores: [
             5,
             3,

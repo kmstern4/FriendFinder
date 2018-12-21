@@ -31,8 +31,12 @@ body {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
     border: 1px solid #888;
     width: 80%;
+    height: 400px;
+    position: relative;
 }
 
 .close {
@@ -40,6 +44,12 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.user-content {
+    position: relative;
+    bottom: 255px;
+    left: 500px;
 }
 
 .close:hover {
@@ -65,6 +75,11 @@ h2 {
     font-family: "Staatliches", cursive;
     text-align: center;
     font-size: 58px;
+}
+
+h3 {
+    font-size: 58px;
+    margin: 0px;
 }
 
 #anchor {
@@ -122,17 +137,30 @@ button:hover {
 }
 
 #name-div {
-    width: 30%;
-    position: absolute;
+    width: 49%;
+    position: relative;
 }
 
 #photo-div {
-    width: 30%;
-    position: absolute;
+    width: 49%;
+    position: relative;
+    left: 450px;
+    bottom: 87px;
+}
+
+#select-div {
+    width: 100%;
+    position: relative;
+    bottom: 80px;
+}
+
+#instructions {
+    color: white;
+    font-size: 28px;
 }
 
 label {
-    color: white;
+    color: #cad8dc;
     font-size: 22px;
 }
 
@@ -157,4 +185,10 @@ select {
     background-position-y: 70%;
     height: 30px;
     width: 100%;
+}
+
+#button-div {
+    text-align: center;
+    position: relative;
+    bottom: 80px;
 }
