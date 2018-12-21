@@ -23,27 +23,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* background-color: rgb(0, 0, 0); */
     background-color: rgb(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
-    border: 1px solid #888;
-    width: 80%;
-    height: 400px;
-    position: relative;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
 .user-content {
@@ -75,11 +55,6 @@ h2 {
     font-family: "Staatliches", cursive;
     text-align: center;
     font-size: 58px;
-}
-
-h3 {
-    font-size: 58px;
-    margin: 0px;
 }
 
 #anchor {
@@ -193,12 +168,80 @@ select {
     bottom: 80px;
 }
 
-#user-image {
-    height: 200px;
-}
-
 #restart-button {
     text-align: center;
     position: relative;
     bottom: 300px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: 1px solid #888;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 50px 300px;
+    grid-template-areas: 
+        "title title title span"
+        "capname capname username username"
+        "capimg capimg userimg userimg";
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+}
+
+h3 {
+    font-size: 48px;
+    margin: 0px;
+    grid-column-start: title-start;
+    grid-column-end: title-end;
+    grid-row-start: title-start;
+    grid-row-end: title-start;
+}
+
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    grid-column-start: span-start;
+    grid-column-end: span-end;
+    grid-row-start: span-start;
+    grid-row-end: span-end;
+    justify-self: right;
+}
+
+#captain-match {
+    grid-column-start: capname-start;
+    grid-column-end: capname-end;
+    grid-row-start: capname-start;
+    grid-row-end: capname-end;
+    justify-self: center;
+}
+
+#captain-image {
+    grid-column-start: capimg-start;
+    grid-column-end: capimg-end;
+    grid-row-start: capimg-start;
+    grid-row-end: capimg-end;
+    justify-self: center;
+}
+
+#user-name {
+    grid-column-start: username-start;
+    grid-column-end: username-end;
+    grid-row-start: username-start;
+    grid-row-end: username-end;
+    justify-self: center;
+}
+
+#user-image {
+    height: 200px;
+    grid-column-start: userimg-start;
+    grid-column-end: userimg-end;
+    grid-row-start: userimg-start;
+    grid-row-end: userimg-end;
+    justify-self: center;
 }
