@@ -196,3 +196,9 @@ select {
 #user-image {
     height: 200px;
 }
+
+#restart-button {
+    text-align: center;
+    position: relative;
+    bottom: 300px;
+}

@@ -43,11 +43,12 @@ function friendMatch(data) {
     console.log(`It occurs at index ${smallIndex}`);
     match = data[smallIndex].name;
     image = data[smallIndex].photo;
+    userIndex = data.length - 1;
     console.log(match);
     $("#captain-match").text(match);
     $("#captain-image").attr("src", image);
-    $("#user-name").text(data[10].name);
-    $("#user-image").attr("src", data[10].photo);
+    $("#user-name").text(data[userIndex].name);
+    $("#user-image").attr("src", data[userIndex].photo);
 };
 
 function showModal() {
