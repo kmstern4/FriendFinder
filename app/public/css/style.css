@@ -192,3 +192,7 @@ select {
     position: relative;
     bottom: 80px;
 }
+
+#user-image {
+    height: 200px;
+}
