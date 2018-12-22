@@ -28,7 +28,6 @@ $("#submit").on("click", function(event) {
             for (var i=0; i < friendData[j].scores.length; i++) {
                 scoreDiff = Math.abs((parseInt(friendData[j].scores[i]) - parseInt(newFriend.scores[i]))) + scoreDiff;
             }
-            console.log(`Score difference for Friend ${j}: ${scoreDiff}`);
             diffArr.push(scoreDiff);
         };
         friendMatch(friendData);
@@ -38,13 +37,10 @@ $("#submit").on("click", function(event) {
 
 function friendMatch(data) {
     var smallestNum = Math.min(...diffArr);
-    console.log(`Smallest Number is ${smallestNum}`);
     var smallIndex = diffArr.indexOf(smallestNum);
-    console.log(`It occurs at index ${smallIndex}`);
     match = data[smallIndex].name;
     image = data[smallIndex].photo;
     userIndex = data.length - 1;
-    console.log(match);
     $("#captain-match").text(match);
     $("#captain-image").attr("src", image);
     $("#user-name").text(data[userIndex].name);
